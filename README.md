@@ -39,7 +39,7 @@ public enum GameStates
         get_back_up
     }
     
-// This Finite State Machine Manages all of the Game's States
+// This Finite State Machine Manages all of the Game's States through a switch statement
     
 void Update()
     {
