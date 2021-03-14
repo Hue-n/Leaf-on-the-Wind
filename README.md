@@ -25,6 +25,8 @@ Tofu: Star Composer, Technical Designer <br />
 Rada: Lead Artist, Lead Animator <br />
 
 ### Hue-n's Contributions
+- Sole programmer of the game
+
 - Finite-State Machine Game Manager
 ```C#
 
