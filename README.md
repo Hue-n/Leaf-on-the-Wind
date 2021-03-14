@@ -12,7 +12,7 @@ Space: Slide  <br />
 
 Tip: You're able to cancel your jump into a slide by pressing "Space" mid-jump!
 
-Play at: https://hue-n.github.io/Leaf-on-the-Wind/
+Play the game [Link](https://hue-n.github.io/Leaf-on-the-Wind/)here! 
 
 Credits:
 Hue-n: Lead Programmer, Technical Artist
