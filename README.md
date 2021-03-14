@@ -37,7 +37,7 @@ public enum GameStates
         get_back_up
     }
     
-    ...
+// This Finite State Machine Manages all of the Game's States
     
 void Update()
     {
@@ -62,4 +62,61 @@ void Update()
                 break;
         }
     }
-    ```
+    
+```
+
+- Dynamic Difficulties
+```C#
+public enum DifficultyStates
+{
+    level1,
+    level2,
+    level3,
+}
+
+// in Update();
+
+switch (currentDifficulty)
+        {
+            case DifficultyStates.level1:
+                CurrentScoreTest();
+                SetDifficulty(-5);
+                spawner.UpdateDifficulty(3);
+                break;
+
+            case DifficultyStates.level2:
+                CurrentScoreTest();
+                SetDifficulty(-40);
+                spawner.UpdateDifficulty(2);
+                break;
+
+            case DifficultyStates.level3:
+                CurrentScoreTest();
+                SetDifficulty(-80);
+                spawner.UpdateDifficulty(1.5f);
+                break;
+        }
+
+// Difficulty is bound to the player's current score:
+
+public void CurrentScoreTest()
+    {
+        if (scoreCount < 50)
+            currentDifficulty = DifficultyStates.level1;
+        if (scoreCount > 50 && scoreCount < 100)
+            currentDifficulty = DifficultyStates.level2;
+        if (scoreCount > 100 && scoreCount < 200)
+            currentDifficulty = DifficultyStates.level3;
+    }
+    
+// Difficult is set through a function that takes a speedLimiter float argument:
+
+void SetDifficulty(float speedLimiter)
+    {
+        ClampDifficulty(speedLimiter);
+        scrollSpeed -= speedIncreasePerSecond * Time.deltaTime;
+        pointsPerSecond = Mathf.Abs(scrollSpeed) / 2;
+    }
+```
+
+- Dynamic Obstacle Spawner
