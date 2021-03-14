@@ -120,3 +120,39 @@ void SetDifficulty(float speedLimiter)
 ```
 
 - Dynamic Obstacle Spawner
+```C#
+
+void Update()
+    {
+        switch (currentMasterSpawnerState)
+        {
+            case (MasterSpawnerStates.disabled):
+                break;
+            case (MasterSpawnerStates.enabled):
+            
+// If the time between spawns is less than or equal to zero, the spawner will randomize an accessor between one and two and use it to instantiate an obstacle at its
+// proper spawner. It will then set the time between spawns back to its initial value.
+
+                if (timeBtwSpawn <= 0)
+                {
+                    int i = Random.Range(0, 2);
+                    Debug.Log(i);
+                    Instantiate(obstacles[i], spawners[i].position, Quaternion.identity);
+                    timeBtwSpawn = startTimeBtwSpawn;
+                }
+
+                else
+                {
+                    timeBtwSpawn -= Time.deltaTime;
+                }
+                break;
+        }
+    }
+
+// This function is utilized to update the new spawn time and is updated in the Switch function of the difficulty manager to change the difficulty of the game.
+
+public void UpdateDifficulty(float newSpawnSpeed)
+    {
+        startTimeBtwSpawn = newSpawnSpeed;
+    }
+```
