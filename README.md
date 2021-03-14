@@ -1,4 +1,4 @@
-## Welcome to Leaf on the Wind!
+## Welcome to Leaf on the Wind! A Game Jam Project
 
 ### Game Jam Theme: New Beginnings
 
