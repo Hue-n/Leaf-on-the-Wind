@@ -26,7 +26,9 @@ Rada: Lead Artist, Lead Animator <br />
 
 ### Hue-n's Contributions
 - Finite-State Machine Game Manager
-`    public enum GameStates
+```C#
+
+public enum GameStates
     { 
         main_menu,
         paused,
@@ -37,7 +39,7 @@ Rada: Lead Artist, Lead Animator <br />
     
     ...
     
-     void Update()
+void Update()
     {
         switch (currentGameState) {
             case GameStates.main_menu:
@@ -60,4 +62,4 @@ Rada: Lead Artist, Lead Animator <br />
                 break;
         }
     }
-    `
+    ```
