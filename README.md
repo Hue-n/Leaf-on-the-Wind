@@ -23,3 +23,41 @@ Hue-n: Lead Programmer, Technical Artist <br />
 Alan: Lead Game Designer, Art Director <br />
 Tofu: Star Composer, Technical Designer <br />
 Rada: Lead Artist, Lead Animator <br />
+
+### Hue-n's Contributions
+- Finite-State Machine Game Manager
+`    public enum GameStates
+    { 
+        main_menu,
+        paused,
+        playing,
+        game_over,
+        get_back_up
+    }
+    
+    ...
+    
+     void Update()
+    {
+        switch (currentGameState) {
+            case GameStates.main_menu:
+                MainMenu();
+                break;
+            case GameStates.paused:
+                Pause();
+                break;
+            case GameStates.playing:
+                leafSpawnSystem.UpdateLeafSpawnState(LeafSystemStates.enabled);
+                Playing();
+                break;
+            case GameStates.game_over:
+                leafSpawnSystem.UpdateLeafSpawnState(LeafSystemStates.disabled);
+                GameOver();
+                break;
+            case GameStates.get_back_up:
+                GetBackUp();
+                UpdateGameState(GameStates.playing);
+                break;
+        }
+    }
+    `
