@@ -1,4 +1,6 @@
-## Welcome to GitHub Pages
+## Welcome to Leaf on the Wind!
+
+https://hue-n.github.io/Leaf-on-the-Wind/
 
 You can use the [editor on GitHub](https://github.com/Hue-n/Leaf-on-the-Wind/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
 
