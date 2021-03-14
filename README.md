@@ -5,6 +5,9 @@
 ### Project Description
 Leaf on the Wind is an endless runner created for a Game Jam in Unity 2020.1.17f1! You play as a Young Boy running in the woods sliding under branches and jumping over rocks. If you collect any of the leaves that fall periodically from the trees above, you gain another point of health! If the young boy runs out of health, he will fall and cry. But don't worry! There's always an option to get back up! There's always a chance at a New Beginning!
 
+### Resolution
+1920 x 1080px
+
 ### Controls <br />
 F11: Fullscreen (Recommended as it uncovers your score in the top left corner)<br />
 A/D: Run Horizontally  <br />
