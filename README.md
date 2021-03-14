@@ -111,7 +111,7 @@ public void CurrentScoreTest()
             currentDifficulty = DifficultyStates.level3;
     }
     
-// Difficult is set through a function that takes a speedLimiter float argument:
+// Difficulty is set through a function that takes a speedLimiter float argument:
 
 void SetDifficulty(float speedLimiter)
     {
